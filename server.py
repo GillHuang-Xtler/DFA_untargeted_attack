@@ -21,7 +21,6 @@ from client import Client
 from federated_learning.nets import NetGenMnist, NetGenCifar, FashionMNISTCNNMAL, Cifar10CNNMAL
 import math
 import copy
-import plot
 import random
 import numpy as np
 from federated_learning.worker_selection.random import RandomSelectionStrategy
