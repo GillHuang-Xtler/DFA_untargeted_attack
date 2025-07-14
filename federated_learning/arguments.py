@@ -42,7 +42,7 @@ class Arguments:
         self.get_poison_effort = 'full'
         self.num_workers = 100
         self.aggregation = "fedsgd"  # trmean, bulyan, mkrum, fedsgd, median
-        self.attack = "none"  # cua, ndss, lie, fang, none
+        self.attack = "cua"  # cua, ndss, lie, fang, none
         self.ndss_deviation_type = "sign"  # std, sign
 
         self.cua_version = "target_class"  # target_class, infer_class
