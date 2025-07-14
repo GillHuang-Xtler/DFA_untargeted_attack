@@ -1,6 +1,5 @@
 ## DFA_untargeted_attack
 
-# Maverick_client_selection
 Code repository for paper "Fabricated Flips: Poisoning Federated Learning without Data", DSN2023.
 The example dataset is FashionMNIST, the downloading and default model settings are already set in the files, you do not need to prepare by yourself.
 
