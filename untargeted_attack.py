@@ -1,7 +1,6 @@
-from federated_learning.utils import replace_0_with_2
 from federated_learning.utils import default_no_change
 from federated_learning.worker_selection import RandomSelectionStrategy
-from server import run_exp
+from federated_learning.server import run_exp
 
 if __name__ == '__main__':
 

@@ -1,14 +1,5 @@
-from .nets import Cifar10CNN
 from .nets import FashionMNISTCNN
-from .nets import Cifar100ResNet
-from .nets import FashionMNISTResNet
-from .nets import Cifar10ResNet
-from .nets import Cifar100VGG
 from .nets import MNISTCNN
-from .worker_selection import BeforeBreakpoint
-from .worker_selection import AfterBreakpoint
-from .worker_selection import PoisonerProbability
-import torch.nn.functional as F
 import torch
 import json
 
@@ -62,26 +53,7 @@ class Arguments:
         self.num_classes = 10
 
 
-        if self.dataset == "cifar_10":
-            self.net = Cifar10CNN
-            # self.net = Cifar10ResNet
-
-            self.lr = 0.01
-            self.momentum = 0.5
-            self.scheduler_step_size = 50
-            self.scheduler_gamma = 0.5
-            self.min_lr = 1e-10
-            self.N = 5000
-            self.generator_image_num = 100
-            self.generator_local_epoch = 10
-            self.layer_image_num = 50
-            self.layer_image_epoch = 20
-            self.reduce = 1
-
-            self.train_data_loader_pickle_path = "data_loaders/cifar10/train_data_loader.pickle"
-            self.test_data_loader_pickle_path = "data_loaders/cifar10/test_data_loader.pickle"
-
-        elif self.dataset == "mnist":
+        if self.dataset == "mnist":
             self.net = MNISTCNN
 
             self.lr = 0.001
@@ -121,18 +93,6 @@ class Arguments:
             self.benign_data_loader_pickle_path = "data_loaders/fashion-mnist/benign_data_loader.pickle"
             self.malicious_data_loader_pickle_path = "data_loaders/fashion-mnist/malicious_data_loader.pickle"
 
-        elif self.dataset == "cifar_100":
-            self.net = Cifar100ResNet
-            # self.net = Cifar100VGG
-
-            self.lr = 0.01
-            self.momentum = 0.5
-            self.scheduler_step_size = 50
-            self.scheduler_gamma = 0.5
-            self.min_lr = 1e-10
-
-            self.train_data_loader_pickle_path = "data_loaders/cifar100/train_data_loader.pickle"
-            self.test_data_loader_pickle_path = "data_loaders/cifar100/test_data_loader.pickle"
 
         else:
             print("Incorrect dataset information, please check.")
