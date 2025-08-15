@@ -4,6 +4,7 @@
 /default_models
 /venv
 /logs
+/results
 /__pycache__
 /.idea
 ./vector_cache
