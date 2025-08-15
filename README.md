@@ -5,10 +5,13 @@ The example dataset is FashionMNIST, the downloading and default model settings 
 
 # To run this file
 
-- python version: py3.7 +
+- python version in the development environment:3.8.10
 - pip install -r requirements.txt
 - python generate_data_distribution.py
 - python generate_default_models.py
+- python untargeted_attack.py
+
+# Note
 - arguments are in 'federated_learning/arguments.py' + untargeted_attack.py
 - set a START_EXP_IDX in untargeted_attack.py and python untargeted_attack.py
 - the logs/results data will be in the logs/res folder
